@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .hero {
+            height: 80vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .featured-destinations {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .featured-destinations h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .destination-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-content p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .travel-tips {
+            background-color: #ecf0f1;
+            padding: 4rem 2rem;
+        }
+        
+        .tips-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .tips-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tips-container p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            margin: 0 1rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            color: #bdc3c7;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Wanderlust Travel</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="travel-tips.html">Travel Tips</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Explore The World</h1>
+        <p>Discover amazing destinations and create unforgettable memories with Wanderlust Travel.</p>
+        <a href="destinations.html" class="btn">Explore Destinations</a>
+    </section>
+    
+    <section class="featured-destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="images/destination1.jpg" alt="Bali, Indonesia">
+                <div class="card-content">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Experience the perfect blend of stunning beaches, lush landscapes, and rich cultural heritage.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/destination2.jpg" alt="Santorini, Greece">
+                <div class="card-content">
+                    <h3>Santorini, Greece</h3>
+                    <p>Enjoy breathtaking sunsets, white-washed buildings, and crystal-clear waters.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <img src="images/destination3.jpg" alt="Kyoto, Japan">
+                <div class="card-content">
+                    <h3>Kyoto, Japan</h3>
+                    <p>Immerse yourself in Japan's ancient traditions, temples, and beautiful gardens.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="travel-tips">
+        <div class="tips-container">
+            <h2>Travel Tips & Inspiration</h2>
+            <p>Looking for advice on how to make the most of your travels? Check out our collection of travel tips, packing guides, and destination insights.</p>
+            <a href="travel-tips.html" class="btn">View Travel Tips</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Wanderlust Travel is dedicated to helping travelers discover amazing destinations worldwide.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@wanderlusttravel.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Wanderlust Travel. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
